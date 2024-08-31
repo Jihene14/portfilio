@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze PC - Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: #ffc900;
+            color: black;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+        }
+
+        .back-button {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            background: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .back-button:hover {
+            background: #555;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+            flex: 1;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 80px auto 0; /* Adjust margin to account for fixed header */
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .project-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .project-content h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .project-content h4 {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .project-content ul {
+            padding-left: 20px;
+        }
+
+        .project-content ul li {
+            margin-bottom: 10px;
+        }
+
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .screenshot-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .screenshot-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .screenshot-item:hover img {
+            transform: scale(1.1);
+        }
+        .technologies {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .technologies h4 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tech-item img {
+            width: 80px;
+            height: 80px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="back-button">Back Home</a>
+        <h1>Analyze PC - Project Details</h1>
+    </header>
+    <div class="container">
+        <section class="section-title">
+            <h2>Project Details</h2>
+            <p>Explore the key features and technical details of the Analyze PC project.</p>
+        </section>
+
+        <div class="project-content">
+            <h3>Project Overview</h3>
+
+            <h4>I. Besoins Fonctionnels</h4>
+            <ul>
+                <li><strong>Authentification :</strong>
+                    <ul>
+                        <li>L’admin saisit son mail et mot de passe pour s’authentifier et pouvoir accéder à son espace dans la plateforme.</li>
+                        <li>L’utilisateur saisit son mail et mot de passe pour consulter les offres (solutions des diagnostics).</li>
+                    </ul>
+                </li>
+                <li><strong>Gestion de questionnaire :</strong>
+                    <ul>
+                        <li>L’admin gère le questionnaire, modifie, supprime, ajoute des questions.</li>
+                        <li>L’utilisateur répond au questionnaire et envoie ses réponses.</li>
+                    </ul>
+                </li>
+                <li><strong>Gestion des utilisateurs :</strong>
+                    <ul>
+                        <li>L’admin peut bloquer ou supprimer des utilisateurs.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>II. Besoins Non Fonctionnels</h4>
+            <ul>
+                <li><strong>Sécurité :</strong> L’application impose l’authentification.</li>
+                <li><strong>Ergonomie :</strong> L’application présente des interfaces conviviales et lisibles à tous les utilisateurs afin d’améliorer l’interaction Homme-Machine.</li>
+                <li><strong>Modularité :</strong> L’application doit avoir un code simple à maintenir et facile à manipuler.</li>
+                <li><strong>Performance :</strong> L’application doit être performante, répondant à toutes les exigences des usagers de manière optimale.</li>
+            </ul>
+        </div>
+
+        <section class="screenshot-gallery">
+            <div class="screenshot-item">
+                <img src="../assets/images/analyzePC/1.png" alt="Analyze PC Screenshot 1">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/analyzePC/2.png" alt="Analyze PC Screenshot 2">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/analyzePC/3.png" alt="Analyze PC Screenshot 3">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/analyzePC/4.png" alt="Analyze PC Screenshot 3">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/analyzePC/5.png" alt="Analyze PC Screenshot 3">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/analyzePC/6.png" alt="Analyze PC Screenshot 3">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/analyzePC/7.png" alt="Analyze PC Screenshot 3">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/analyzePC/8.png" alt="Analyze PC Screenshot 3">
+            </div>
+        </section>
+        <section class="technologies">
+            <h4>Technologies Utilisées</h4>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="../assets/images/logos/node.png" alt="Node.js">
+                    <span>Node.JS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="../assets/images/logos/Angular.png" alt="React">
+                    <span>Angular</span>
+                </div>
+                <div class="tech-item">
+                    <img src="../assets/images/logos/mongo.png" alt="Laravel">
+                    <span>MongoDB</span>
+                </div>
+                <!-- Add more technologies as needed -->
+            </div>
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

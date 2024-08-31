@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Platform - Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: #ffc900;
+            color: black;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+        }
+
+        .back-button {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            background: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .back-button:hover {
+            background: #555;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+            flex: 1;
+            text-align: center;
+        }
+        
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 80px auto 0; /* Adjust margin to account for fixed header */
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .project-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .project-content h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .project-content h4 {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .project-content ul {
+            padding-left: 20px;
+        }
+
+        .project-content ul li {
+            margin-bottom: 10px;
+        }
+
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .screenshot-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .screenshot-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .screenshot-item:hover img {
+            transform: scale(1.1);
+        }
+        .technologies {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .technologies h4 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tech-item img {
+            width: 80px;
+            height: 80px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="back-button">Back Home</a>
+        <h1>Chatbot Platform - Project Details</h1>
+    </header>
+    <div class="container">
+       
+
+        <div class="project-content">
+            <h3>Project Overview</h3>
+
+            <h4>I. Objectif du Projet</h4>
+            <p>Le projet consiste à développer une plateforme de chatbot polyvalente qui s'intègre facilement avec le canal Messenger afin d'automatiser les conversations avec les utilisateurs de la page Facebook.</p>
+
+            <h4>II. Description du Projet</h4>
+
+            <h5>1. Les besoins fonctionnels</h5>
+            <ul>
+                <li><strong>Gestion des comptes</strong>
+                    <ul>
+                        <li>Un administrateur peut consulter la liste des utilisateurs.</li>
+                        <li>Un administrateur peut ajouter, modifier, supprimer un compte utilisateur.</li>
+                    </ul>
+                </li>
+                <li><strong>Notification</strong>
+                    <ul>
+                        <li>Notre application offre à l'utilisateur la possibilité de recevoir des notifications par e-mail pour réinitialiser le mot de passe en cas d'oubli.</li>
+                    </ul>
+                </li>
+                <li><strong>Gestion des rôles</strong>
+                    <ul>
+                        <li>Un administrateur peut créer un rôle pour l’associer à un ou plusieurs utilisateurs pour définir leurs permissions.</li>
+                        <li>Un administrateur peut consulter les rôles ainsi que les modifier ou les supprimer.</li>
+                    </ul>
+                </li>
+                <li><strong>Gestion des départements</strong>
+                    <ul>
+                        <li>Un administrateur peut créer un département pour l’associer à un ou plusieurs utilisateurs.</li>
+                        <li>Un administrateur peut consulter les départements ainsi que les modifier ou les supprimer.</li>
+                    </ul>
+                </li>
+                <li><strong>Gestion de la base de connaissances</strong>
+                    <ul>
+                        <li>Un utilisateur peut ajouter, modifier et supprimer des requêtes dans la base de connaissances.</li>
+                        <li>Un utilisateur peut choisir la confidentialité de ses requêtes.</li>
+                        <li>Un administrateur peut consulter l’historique des utilisateurs pour la gestion de la base de connaissance.</li>
+                        <li>Alimenter la base de connaissances pour automatiser les réponses aux questions fréquentes.</li>
+                    </ul>
+                </li>
+                <li><strong>Gestion de messagerie</strong>
+                    <ul>
+                        <li>Un utilisateur peut ajouter des blocs, des menus, un message par défaut, un message de bienvenue.</li>
+                        <li>Un utilisateur peut consulter le scénario de sa page Facebook.</li>
+                    </ul>
+                </li>
+                <li><strong>Intégration transparente avec Messenger</strong>
+                    <ul>
+                        <li>Un utilisateur peut ajouter une page Facebook.</li>
+                        <li>Assurer une connectivité fluide et un fonctionnement harmonieux sur Facebook et Messenger.</li>
+                    </ul>
+                </li>
+                <li><strong>Entraînement sur la Base de Connaissances</strong>
+                    <ul>
+                        <li>Effectuer un entraînement sur les données de la base de connaissances saisies par l'utilisateur.</li>
+                    </ul>
+                </li>
+                <li><strong>Automatisation avec ChatGPT</strong>
+                    <ul>
+                        <li>Automatiser les conversations sur Messenger en intégrant ChatGPT.</li>
+                    </ul>
+                </li>
+                <li><strong>Entraînement sur un Document</strong>
+                    <ul>
+                        <li>Proposer un entraînement sur un document fourni par l'utilisateur pour enrichir les capacités du chatbot.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h5>2. Besoins Non Fonctionnels</h5>
+            <ul>
+                <li><strong>Sécurité et Confidentialité</strong>
+                    <ul>
+                        <li>Tous les accès aux différents espaces doivent être protégés par un mot de passe et un privilège d’accès qui doivent être définis.</li>
+                    </ul>
+                </li>
+                <li><strong>Performance</strong>
+                    <ul>
+                        <li>La plateforme doit être performante, assurant des temps de réponse rapides sur l'ensemble des canaux.</li>
+                    </ul>
+                </li>
+                <li><strong>Scalabilité</strong>
+                    <ul>
+                        <li>La solution doit être scalable pour s'adapter à une croissance future de l'utilisation.</li>
+                    </ul>
+                </li>
+                <li><strong>Documentation</strong>
+                    <ul>
+                        <li>Fourniture d'une documentation technique complète et d'un manuel d'utilisation.</li>
+                    </ul>
+                </li>
+                <li><strong>La maintenabilité</strong>
+                    <ul>
+                        <li>L’application doit être facile à maintenir ; En effet, la maintenance assure la longévité de l’application.</li>
+                    </ul>
+                </li>
+                <li><strong>L’ergonomie</strong>
+                    <ul>
+                        <li>Notre application doit présenter une interface simple pour que l’utilisateur ait une manipulation aisée.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h5>3. Modélisation des besoins</h5>
+            <ul>
+                <li><strong>Identification des acteurs</strong>
+                    <ul>
+                        <li><strong>L’utilisateur :</strong> Cet acteur utilise l'application pour automatiser son chatbot Messenger. Il peut facilement naviguer dans l'application.</li>
+                        <li><strong>L'administrateur :</strong> Il est responsable de la gestion des utilisateurs, des rôles, et des départements dans l'application.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <section class="screenshot-gallery">
+            <div class="screenshot-item">
+                <img src="../assets/images/chatbot/1.png" alt="Chatbot Platform Screenshot 1">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/chatbot/2.png" alt="Chatbot Platform Screenshot 1">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/chatbot/3.png" alt="Chatbot Platform Screenshot 1">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/chatbot/4.png" alt="Chatbot Platform Screenshot 1">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/chatbot/5.png" alt="Chatbot Platform Screenshot 1">
+            </div>
+            <div class="screenshot-item">
+                <img src="../assets/images/chatbot/6.jpeg" alt="Chatbot Platform Screenshot 1">
+            </div>
+            <!-- Add more screenshots as needed -->
+        </section>
+        <section class="technologies">
+            <h4>Technologies Utilisées</h4>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="../assets/images/logos/laravel.png" alt="Node.js">
+                    <span>Laravel</span>
+                </div>
+                <div class="tech-item">
+                    <img src="../assets/images/logos/node.png" alt="Node.js">
+                    <span>Node.TS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="../assets/images/logos/python.png" alt="Node.js">
+                    <span>Pythoon</span>
+                </div>
+                <div class="tech-item">
+                    <img src="../assets/images/logos/react.png" alt="React">
+                    <span>React.TS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="../assets/images/logos/mysql.png" alt="Laravel">
+                    <span>Mysql</span>
+                </div>
+                <!-- Add more technologies as needed -->
+            </div>
+        </section>
+    </div>
+
+   
+</body>
+
+</html>
